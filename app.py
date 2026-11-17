@@ -47,14 +47,14 @@ def init_db():
         );
         """)
 
-LOGIN_PAGE = r\"\"\"
+LOGIN_PAGE = r"""
 <!doctype html><html lang=\"pt-br\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <title>Entrar — Viral Shop AI</title><body style=\"background:#101116;color:white;font-family:Arial;padding:24px\">
 <div style=\"max-width:380px;margin:12vh auto;background:#1b1e28;padding:22px;border-radius:14px\">
 <h2>🛍️ Viral Shop AI</h2><p>Entre com a senha administrativa configurada no servidor.</p>
 <form method=\"post\"><input name=\"password\" type=\"password\" required placeholder=\"Senha\" style=\"width:100%;padding:12px;box-sizing:border-box\">
 <p><button style=\"padding:11px 16px\">Entrar</button></p></form>{{error}}</div></body></html>
-\"\"\"
+"""
 
 def login_required(fn):
     @wraps(fn)
